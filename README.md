@@ -35,3 +35,12 @@ File quan ly du an cua chung ta <br>
 Loai bo nhung folder hay file khong muon commit len git <br>
 
 - Loai bo node_modules: vi qua nang. <br>
+
+# Bien dich file scss -> css
+
+-          [INPUT]                [OUTPUT]
+- npx sass src/scss/index.scss dist/index.css
+
+# Thu muc public
+
+- Chua file (static): images, fonts, audios, icons
