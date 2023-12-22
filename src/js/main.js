@@ -42,3 +42,12 @@ document.querySelectorAll(".card").forEach((card) => {
     }
   };
 });
+
+// -- Footer --
+const year = new Date().getFullYear();
+document.querySelector("footer .created-by").innerHTML = `NgoDai © ${year}`;
+
+// -- Back To Top --
+document.querySelector(".back-to-top").onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
