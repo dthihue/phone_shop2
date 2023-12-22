@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone Shop</title>
 
     <!-- Font Gg -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <!-- Style -->
-    <link rel="stylesheet" href="src/scss/index.scss">
+    <link rel="stylesheet" href="src/scss/index.scss" />
 </head>
 
 <body>
@@ -42,6 +42,28 @@
         </nav>
     </header>
 
+    <!-- Hero -->
+    <!-- BEM -->
+    <!-- Block-Element__Modifier -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>CyberPhone</h1>
+                    <p class="hero-content__short">Best Smartphone of 2021!</p>
+                    <p class="hero-content__long">
+                        Cras tortor mi, lobortis quis ornare in, varius scelerisque urna.
+                        Vivamus imperdiet dolor nec odio convallis consequat.
+                    </p>
+                </div>
+                <div class="hero-img">
+                    <img src="public/imgs/product-header2.png" />
+                </div>
+            </div>
+        </div>
+
+        <img class="hero-background" src="public/imgs/product-header-bg.jpg" />
+    </section>
 
     <script type="module" src="src/js/main.js"></script>
 </body>
