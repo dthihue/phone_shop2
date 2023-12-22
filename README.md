@@ -44,3 +44,15 @@ Loai bo nhung folder hay file khong muon commit len git <br>
 # Thu muc public
 
 - Chua file (static): images, fonts, audios, icons
+
+# 2 dev a - b
+
+npm i: cai tat ca thu vien trong du an
+1.10.0 < version < 1.10.10
+dev a: cai sass version 1.10.2
+dev b: cai sass version 1.10.3
+
+# File scss: bat dau bang dau "\_"
+
+- file do se khong duoc bien dich tat ca, tru nhung cai nao duoc tai su dung o noi khac
+- Thuong dung de khai bao bien, mixin.
