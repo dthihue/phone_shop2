@@ -9,6 +9,7 @@
   "author": "Dai",
   "license": "ISC",
   "dependencies": {
+    "json-server": "^0.17.4",
     "sass": "^1.69.5",
     "vite": "^5.0.10"
   }
