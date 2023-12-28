@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite | json-server db.json",
     "start": "vite",
-    "build": "vite build"
+    "build": "vite build & json-server db.json"
   },
   "author": "Dai",
   "license": "ISC",
