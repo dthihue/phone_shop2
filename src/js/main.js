@@ -1,3 +1,6 @@
+import { BASE_URL } from "./const.js";
+import { elt } from "./utils.js";
+
 // -- Header --
 document.querySelectorAll(".nav-link").forEach((nav) => {
   console.log(nav);
@@ -36,7 +39,7 @@ document.querySelector("footer .created-by").innerHTML = `NgoDai © ${year}`;
  */
 // tham số thứ 1: đường dẫn của api.
 // tham số thứ 2: thông tin mà chúng ta gửi xuống BE.
-fetch("http://localhost:3000/phones", {
+fetch(`${BASE_URL}/products`, {
   method: "get",
 })
   // Sau khi phía BE trả dữ liệu về thành công thì sẽ gọi call back function và truyền dữ liệu vào cb function
@@ -166,32 +169,6 @@ window.handleClick = handleClick;
  * Chỉ được phép truyền primitive type
  */
 
-function elt(tagName, properties, ...children) {
-  // Tạo element
-  const ele = document.createElement(tagName);
-
-  // Gắn thuộc tính lên trên element
-  if (properties) {
-    for (const prop of Object.entries(properties)) {
-      const [key, value] = prop;
-      ele[key] = value;
-    }
-  }
-
-  // append chỉ chấp nhận là một element
-  if (Array.isArray(children)) {
-    children.forEach((child) => {
-      ele.append(child);
-    });
-  } else {
-    if (children) {
-      ele.append(children);
-    }
-  }
-
-  return ele;
-}
-
 // const backToTop = createElement(
 //   "button",
 //   {
@@ -239,8 +216,36 @@ function BackToTop() {
   );
 }
 
-document.body.append(Header());
-document.body.append(Hero());
-document.body.append(Body());
-document.body.append(Footer());
+// document.body.append(Header());
+// document.body.append(Hero());
+// document.body.append(Body());
+// document.body.append(Footer());
 document.body.append(BackToTop());
+
+// ---
+// Khi start mới dự án.
+// Hình dung: Ghi đè lên những giá trị của thuộc tính onclick
+document.querySelector(".btn-menu").onclick = () => {
+  const menu = document.querySelector(".small-menu");
+  menu.classList.add("active");
+};
+
+// document.querySelector(".btn-menu").onclick = () => {
+//   // const menu = document.querySelector(".small-menu");
+//   // menu.classList.add("active");
+//   console.log("hihi");
+// };
+
+document.querySelector(".close").onclick = () => {
+  const menu = document.querySelector(".small-menu");
+  menu.classList.remove("active");
+};
+
+// ---
+// Khi bảo trì dự án thì dùng cái này.
+document.querySelector(".btn-menu").addEventListener("click", () => {
+  // const menu = document.querySelector(".small-menu");
+  // menu.classList.add("active");
+  console.log("hihi");
+});
+// ---

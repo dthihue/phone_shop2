@@ -6,6 +6,8 @@
 @use "components/footer";
 
 // -- Utils --
+@use "helper" as *;
+// -- Utils
 .container {
   margin-right: 2rem;
   margin-left: 2rem;
@@ -40,6 +42,14 @@
   height: 1.6rem;
 
   @extend %icon;
+}
+
+.icon-menu {
+  @extend %icon;
+
+  background-image: url("/imgs/menu.svg");
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .back-to-top {
